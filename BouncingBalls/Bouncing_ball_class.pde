@@ -30,5 +30,13 @@ class Ball {
       yspeed=-yspeed;
     }
   }
+  void checkCollision(Ball b) {          //This method checks to see if my object is touching another Ball object
+    if (dist(x, y, b.x, b.y)<r+b.r) {
+      print("touch");                    //I use print() to make sure the method recognizes intersections as expected
+    }                                    //When you try something new, use print() like this to make sure the code is running when you think it is
+    else {
+      print("...");
+    }
+  }
 }
 
