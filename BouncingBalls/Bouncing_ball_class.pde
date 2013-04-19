@@ -42,9 +42,18 @@ class Ball {
   }
   void bounce(Ball b) {                     
     if (checkCollision(b)) {
-      xspeed=-xspeed;
-      yspeed=-yspeed;
+      if (x<b.x) {
+        xspeed=-random(1, 5);
+      }
+      if (x>b.x) {
+        xspeed=random(1, 5);
+      }
+      if (y<b.y) {
+        yspeed=-random(1, 5);
+      }
+      if (y>b.y) {
+        yspeed=random(1, 5);
+      }
     }
   }
 }
-
