@@ -11,8 +11,8 @@ void draw() {
   b2.display();
   b1.move();
   b2.move();
-  b1.checkCollision(b2);
-  b2.checkCollision(b1);
+  b1.bounce(b2);
+  b2.bounce(b1);
 }
 
 
