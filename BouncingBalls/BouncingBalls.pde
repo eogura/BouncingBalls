@@ -30,6 +30,11 @@ void draw() {
   for (int i = 0; i < balls.length; i++) {
     balls[i].display();
     balls[i].move();
+    for (int j = 0; j < balls.length; j++) {
+      if (i!=j) {
+        balls[i].bounce(balls[j]);
+      }
+    }
   }
 }
 
